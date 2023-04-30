@@ -23,6 +23,15 @@ body {
   font-family: "sofia-pro",sans-serif;
 }
 
+img {
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 .text-center {
   z-index: 2;
   position: relative;
@@ -41,7 +50,6 @@ body {
 
 .background-header {
   background-image: url("https://cdn.gametv.vn/news_media/image/TFT-Set-8_0x0_1678155246.png");
-  background-position: top;
   background-size: cover;
   height: 450px !important;
   width: 100%;
@@ -51,6 +59,7 @@ body {
   left: 0;
   right: 0;
   filter: brightness(0.40);
+  background-attachment: fixed;
 }
 
 .text-header {
@@ -79,9 +88,11 @@ body {
 
 .home-app {
   margin: 100px auto;
-  max-width: 1200px;
   left: 0;
   right: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .home-app .app-info h2 {
@@ -96,6 +107,10 @@ body {
 .home-app .app-info p {
   color: #88a0a7;
   line-height: 1.8em;
+}
+
+.image-full, .image-crop {
+  filter: contrast(1.04);
 }
 
 .home-app .app-image.right .image-full {
@@ -186,7 +201,7 @@ body {
 .btn-github, .btn-fb, .btn-ig, .btn-yt {
   color: #fff !important;
   background-color: #123040 !important;
-  padding: 8px 12px !important;
+  padding: 6px 12px !important;
   border: none !important;
   margin: 0 5px;
 }
@@ -194,4 +209,143 @@ body {
 .btn-github:hover, .btn-fb:hover, .btn-ig:hover, .btn-yt:hover {
   color: #123040 !important;
   background-color: #f0f0f0 !important;
+}
+
+.col-12.home-app.features .row {
+  max-width: 1200px !important;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.row.dark {
+  background: #102531;
+}
+
+.home .home-app.features {
+  padding: 80px 0;
+}
+
+.home .home-app .features-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+}
+
+.home-app .features-title h2 {
+  font-family: "sofia-pro",sans-serif;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.3em;
+  margin: 0 0 10px;
+}
+
+.home-app .app-features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #123040;
+  margin: 30px 10px 0;
+  padding: 0;
+  border-radius: 3px;
+}
+
+.home-app .app-features h4 {
+  font-family: "sofia-pro",sans-serif;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3em;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  border-bottom: #102531 solid 1px;
+  display: flex;
+  align-items:center;
+  text-align: center;
+  justify-content: center;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+h4 img {
+  height: 24px;
+  align-self: center;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 1.3em;
+  margin-right: 5px;
+}
+
+.home-app .app-features .divider {
+  background: #102531;
+}
+
+.divider {
+  margin: 0;
+}
+
+.home-app .app-features p {
+  line-height: 1.8em;
+  margin: 0;
+  padding: 20px 20px 40px;
+}
+
+ol, p, ul {
+  font-family: "sofia-pro",sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+p {
+  color: #88a0a7;
+  line-height: 2em;
+  margin: 0 0 20px;
+  max-width: 700px;
+}
+
+.home-app .app-info a {
+  display: flex;
+  align-items: center;
+  color: #4080b0;
+  font-weight: 600;
+  margin: 2.5px 0;
+  text-decoration: none !important;
+  width: fit-content;
+}
+
+.home-app .app-info a:hover {
+  color: #97bdd9;
+}
+
+.home-app .app-info a img {
+  width: 10px;
+  margin-top: 2px;
+  margin-left: 8px;
+}
+
+.home-app .app-image .ezreal {
+  width: 400px;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+.col-12 h2, .col-12.col-lg-6.app-image .grey {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }

@@ -13,7 +13,7 @@ function Header(props) {
     <RootHeaderDefault id="root-header">
       <div className="wrapper">
         <div className="icon-version">
-          <div className="icon">
+          <div className="icon" title="Author: hoangxuanlam2007&#013;Supporter: khanh3118">
             <a href="/"><img alt="TFTactician" src={Logo}/></a>
           </div>
           <div className="version">
@@ -35,6 +35,7 @@ function Header(props) {
         <div className="social-icons">
 
           <button type="button" className="btn btn-github"
+          title="GitHub"
                 onClick={() => {
                   window.open("https://github.com/hoangxuanlam2007", "_blank");
                 }}
@@ -45,6 +46,7 @@ function Header(props) {
           </button>
 
           <button type="button" className="btn btn-fb"
+          title="Facebook"
                 onClick={() => {
                   window.open("http://facebook.com/chimmywnhatt", "_blank");
                 }}
@@ -55,6 +57,7 @@ function Header(props) {
           </button>
 
           <button type="button" className="btn btn-ig"
+          title="Instagram"
                 onClick={() => {
                   window.open("https://www.instagram.com/chimmywnhatt/", "_blank");
                 }}
@@ -65,6 +68,7 @@ function Header(props) {
           </button>
 
         <button type="button" className="btn btn-yt"
+        title="Youtube"
               onClick={() => {
                 window.open("https://www.youtube.com/channel/UCVzxZyNZfd_O23kRpb1cT8Q", "_blank");
               }}
@@ -83,6 +87,12 @@ function Header(props) {
 export default Header;
 
 const RootHeaderDefault = styled.div`
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   width: 100%;
   background-color: #0d202b;
   .wrapper {
@@ -101,8 +111,14 @@ const RootHeaderDefault = styled.div`
       .icon {
         margin-right: 15px;
         img {
-          height: 35px;
+          height: 34.5px;
           vertical-align: middle;
+          user-drag: none;
+          -webkit-user-drag: none;
+          user-select: none;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
         }
       }
     }

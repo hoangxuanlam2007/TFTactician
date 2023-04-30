@@ -58,6 +58,12 @@ function TopNavigation(props) {
 export default TopNavigation;
 
 const TopNavigationDefault = styled.div`
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   height: 50px;
   background-color: #102531;
   border-bottom: 1px solid #17313a;

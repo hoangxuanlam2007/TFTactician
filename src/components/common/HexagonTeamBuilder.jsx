@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { Fragment, useContext } from "react";
 import { DataContext } from "contexts/DataContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { useState } from "react";
 import { HEXAGON_BUILDER_BORDER_COLORS } from "config/color";
 import { clearSelected } from "utils/helper";

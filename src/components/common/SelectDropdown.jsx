@@ -22,11 +22,16 @@ function Select(props) {
 export default Select;
 
 const SelectDefault = styled.div`
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   position: relative;
-  cursor: pointer;
   background-color: #123040;
   color: white;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: 4px;
   width: 100%;
   width: max-content;
