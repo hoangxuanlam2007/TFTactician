@@ -71,21 +71,7 @@ export default function Hexagon({
         >
           {(levelVisible || data.max_level) && (
             <Fragment>
-              <FontAwesomeIcon
-                className={addActive(data.max_level)}
-                size="sm"
-                icon={solid("star")}
-              />
-              <FontAwesomeIcon
-                className={addActive(data.max_level)}
-                size="sm"
-                icon={solid("star")}
-              />
-              <FontAwesomeIcon
-                className={addActive(data.max_level)}
-                size="sm"
-                icon={solid("star")}
-              />
+              <div className={addActive(data.max_level)}>★★★</div>
             </Fragment>
           )}
         </div>
@@ -172,7 +158,9 @@ const HexagonWrapper = styled.div`
     }
   }
   .character-levels {
-    top: -15px;
+    top: -25px;
+    font-size: 20px !important;
+    text-shadow: 0 2px 5px #000;
     .active {
       color: #ffe000;
     }
