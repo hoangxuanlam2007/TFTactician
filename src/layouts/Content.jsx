@@ -1,19 +1,25 @@
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Content(props) {
+  const location = useLocation();
+  const shouldRemove = location.pathname === "/privacy-policy" || location.pathname === "/update-notes";
+
   return (
     <ContentDefault id="content-default">
-      {/* exclueWrapper is being used in Home.jsx to make sure the Wrapper is not display on Home page*/}
-      {!props.excludeWrapper && <Wrapper className="wrapper">
-        <a className="version-update" href="/">
+      <Wrapper className="wrapper">
+        
+      {/* Make the new set banner only appear on specific page */}
+        {!shouldRemove && <Link className="version-update" id="version-update" to="/update-notes">
           <div className="update-title">
-            Set 8.5
+            Mùa 8.5 đã có mặt trên TFTactician!
           </div>
-          <div className="update-subtitle">Click here to learn more</div>
-        </a>
+          <div className="update-subtitle">Ấn vào đây để tìm hiểu thêm</div>
+        </Link>}
         {props.children}
 
-      </Wrapper>}
+      </Wrapper>
     </ContentDefault>
   );
 }
@@ -22,7 +28,6 @@ export default Content;
 
 const ContentDefault = styled.div`
   min-height: 100vh;
-  padding-top: 45px;
   background-color: #0d202b;
   @media (max-width: 1024px) {
     padding-left: 45px;
@@ -38,8 +43,8 @@ const Wrapper = styled.div`
     position: relative;
     font-size: 21px;
     background: #102531;
-    background-image: url(https://rerollcdn.com/update/set-7-5-update-bg.png);
-    background-position: center 600px;
+    background-image: url(https://rerollcdn.com/update/set-8-5-update-bg.png);
+    background-position: center -250px;
     background-size: cover;
     border: 1px solid #17313a;
     width: 100%;

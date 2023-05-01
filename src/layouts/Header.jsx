@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
+import { Link } from "react-router-dom";
+
 import Logo from './logo/logo.png';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,7 +16,7 @@ function Header(props) {
       <div className="wrapper">
         <div className="icon-version">
           <div className="icon" title="Author: hoangxuanlam2007&#013;Supporter: khanh3118">
-            <a href="/"><img alt="TFTactician" src={Logo}/></a>
+            <Link to="/"><img alt="TFTactician" src={Logo}/></Link>
           </div>
           <div className="version">
             <SelectDropdown

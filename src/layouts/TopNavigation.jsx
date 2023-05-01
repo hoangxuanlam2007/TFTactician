@@ -1,4 +1,4 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 function TopNavigation(props) {
@@ -11,43 +11,33 @@ function TopNavigation(props) {
         <ul>
           <li>
             <NavLink onClick={() => props.hanleClickLink()} to="teamcomps" className="header-item">
-              Team Comps
+              Đội hình
             </NavLink>
           </li>
           <li>
             <NavLink onClick={() => props.hanleClickLink()} to="teambuilder" className="header-item">
-              Team Builder
+              Xây dựng đội hình
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={() => props.hanleClickLink()} to="/champions" className="header-item">
-              Champions
+            <NavLink onClick={() => props.hanleClickLink()} to="champions" className="header-item">
+              Tướng
             </NavLink>
           </li>
           <li>
             <NavLink onClick={() => props.hanleClickLink()} to="database" className="header-item">
-              Database
-            </NavLink>
-          </li>
-          <li>
-            <NavLink onClick={() => props.hanleClickLink()} to="/metareport" className="header-item">
-              Meta Report
+              Dữ liệu tướng
             </NavLink>
           </li>
           <li>
             <NavLink onClick={() => props.hanleClickLink()} to="itembuilder" className="header-item">
-              Item Builder
+              Trang bị
             </NavLink>
           </li>
           <li>
-            <Link to="/" className="header-item">
-              Patch Notes
-            </Link>
-          </li>
-          <li>
-            <Link to="/" className="header-item">
-              Tier Lists
-            </Link>
+            <NavLink onClick={() => props.hanleClickLink()} to="update-notes" className="header-item">
+              Cập nhật
+            </NavLink>
           </li>
         </ul>
       </div>
@@ -82,6 +72,7 @@ const TopNavigationDefault = styled.div`
         flex-grow: 1;
         height: 100%;
         .header-item {
+          font-size: 15px;
           height: 100%;
           position: relative;
           display: flex;

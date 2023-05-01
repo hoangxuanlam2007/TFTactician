@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 import SelectDropdown from "components/common/SelectDropdown";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,10 +10,10 @@ export default function Footer() {
     <FooterWrapper>
       <div className="container">
         <div className="footer-links">
-          <a href="/">Chính sách bảo mật</a>
-          <a href="/">Giấy phép nguồn mở</a>
-          <a href="/">Mã nguồn</a>
-          <a href="/">Báo lỗi</a>
+          <Link to="/privacy-policy">Chính sách bảo mật</Link>
+          <a href="https://github.com/hoangxuanlam2007/TFTactician/blob/main/LICENSE" target="_blank" rel="noreferrer">Giấy phép nguồn mở</a>
+          <a href="https://github.com/hoangxuanlam2007/TFTactician" target="_blank" rel="noreferrer">Mã nguồn</a>
+          <a href="https://github.com/hoangxuanlam2007/TFTactician/issues" target="_blank" rel="noreferrer">Báo lỗi</a>
           <div className="language-btn">Ngôn ngữ 
             <div className="version">
             <SelectDropdown

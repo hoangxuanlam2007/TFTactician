@@ -9,84 +9,30 @@ import ChampionsStats from "./views/Database/Contents/ChampionsStats";
 import Origins from "./views/Database/Contents/Origins";
 import Classes from "./views/Database/Contents/Classes";
 import "./firebase/main";
-import { loader as ChampionsManagerLoader } from "views/Manager/ChampionsManager";
 import { AuthProvider } from "contexts/AuthContext";
-import PrivateRoute from "components/auth/PrivateRoute";
 import { DataProvider } from "contexts/DataContext";
 import { loader as teamLoader } from "views/TeamBuilder";
-import { MetaReportProvider } from "contexts/MetaReportContext";
 import ChampionDetail from "views/ChampionDetail";
 import ScrollToTop from "components/common/ScrollToTop";
 
 const DatabaseLayout = lazy(() => import("./views/Database/DatabaseLayout"));
 const TeamComps = lazy(() => import("views/TeamComps"));
-const MetaReport = lazy(() => import("views/MetaReport"));
 const TeamBuilder = lazy(() => import("views/TeamBuilder"));
 const ItemBuilder = lazy(() => import("./views/ItemBuilder"));
 
-const ItemsManager = lazy(() => import("views/Manager/ItemsManager"));
-const SynergysManager = lazy(() => import("views/Manager/SynergysManager"));
-const SignUp = lazy(() => import("components/auth/SignUp"));
-const TeamCompsManager = lazy(() => import("views/Manager/TeamCompsManager"));
 const ChampionsView = lazy(() => import("views/Champions"));
-
-const Home = lazy(() => import("./views/Home"));
+const Home = lazy(() => import("views/Home"));
+const PrivacyPolicy = lazy(() => import("views/PrivacyPolicy"));
+const UpdateNotes = lazy(() => import("views/UpdateNotes"));
 
 const router = createBrowserRouter([
   {
-    path: "/login",
+    path: "/",
     element: (
       <Suspense>
-        <SignUp />
+        <Home />
       </Suspense>
     ),
-  },
-  {
-    path: "/manager/origins",
-    element: (
-      <PrivateRoute>
-        <Suspense>
-          <SynergysManager />
-        </Suspense>
-      </PrivateRoute>
-    ),
-    loader: ChampionsManagerLoader,
-  },
-  {
-    path: "/manager/teamcomps",
-    element: (
-      <PrivateRoute>
-        <Suspense>
-          <TeamCompsManager />
-        </Suspense>
-      </PrivateRoute>
-    ),
-    loader: ChampionsManagerLoader,
-  },
-  {
-    path: "/manager/items",
-    element: (
-      <PrivateRoute>
-        <Suspense>
-          <ItemsManager />
-        </Suspense>
-      </PrivateRoute>
-    ),
-    loader: ChampionsManagerLoader,
-  },
-  {
-    path: "/home",
-    element: (
-      <PrivateRoute>
-        <Suspense>
-          <Home />
-        </Suspense>
-      </PrivateRoute>
-    ),
-  },
-  {
-    path: "/",
-    element: <Home />,
   },
   {
     path: "/",
@@ -101,14 +47,20 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/metareport",
+        path: "privacy-policy",
         element: (
-          <MetaReportProvider>
-            <Suspense>
-              <MetaReport />
-            </Suspense>
-          </MetaReportProvider>
-        ),
+        <Suspense>
+          <PrivacyPolicy />
+        </Suspense>
+        )
+      },
+      {
+        path: "update-notes",
+        element: (
+        <Suspense>
+          <UpdateNotes />
+        </Suspense>
+        )
       },
       {
         path: "teambuilder/:teamId",
