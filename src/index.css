@@ -2,7 +2,7 @@
 
 @font-face { 
   font-family: 'sofia-pro';
-  src: url('./fonts/sofia-pro.woff2') format('woff2');
+  src: url('./fonts/Spiegel-Regular.woff') format('woff');
 }
 
 ::-webkit-scrollbar {
@@ -492,4 +492,8 @@ iframe {
   margin: 0 auto;
   position: relative;
   display: block;
+}
+
+.table-item .item-cost {
+  color: #FFFFFF !important;
 }

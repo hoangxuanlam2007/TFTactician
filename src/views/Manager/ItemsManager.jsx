@@ -80,7 +80,7 @@ function SynergysManager() {
   return (
     <ItemsManagerDefault>
       <Wrapper className="wrapper">
-        <Title align="center">Create Item</Title>
+        <Title align="center">Tạo trang bị</Title>
         <Form
           form={form}
           name="basic"

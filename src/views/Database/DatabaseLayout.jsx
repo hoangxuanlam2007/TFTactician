@@ -21,7 +21,7 @@ function DatabaseLayout() {
       <MainLayout
         nameContent={
           <DatabaseLayoutTitle>
-            <span className="database-layout-tile">Database</span>
+            <span className="database-layout-tile">Dữ liệu tướng</span>
           </DatabaseLayoutTitle>
         }
         sideContent={
@@ -29,22 +29,22 @@ function DatabaseLayout() {
             <ul>
               <li>
                 <NavLink to="/database/championstats" className="header-item">
-                  Champions Stats
+                  Theo thông số
                 </NavLink>
               </li>
               <li className="active">
                 <NavLink to="/database/champions" className="header-item">
-                  Champions
+                  Theo tướng
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/database/origins" className="header-item">
-                  Origins
+                  Theo tộc
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/database/classes" className="header-item">
-                  Classes
+                  Theo hệ
                 </NavLink>
               </li>
             </ul>
@@ -57,25 +57,24 @@ function DatabaseLayout() {
                 <Route
                   path="champions"
                   element={
-                    <div className="name">TFT Champions Synergy List</div>
+                    <div className="name">Theo tướng DTCL</div>
                   }
                 />
                 <Route
                   path="championstats"
-                  element={<div className="name">TFT Champions Stats</div>}
+                  element={<div className="name">Thông số tướng DTCL</div>}
                 />
                 <Route
                   path="origins"
-                  element={<div className="name">TFT Origins List</div>}
+                  element={<div className="name">Thông số tộc trong DTCL</div>}
                 />
                 <Route
                   path="classes"
-                  element={<div className="name">TFT Classes List</div>}
+                  element={<div className="name">Thông số hệ trong DTCL</div>}
                 />
               </Routes>
               <SelectDropDown
-                dropDownItems={[{ text: "Set 7.5", isSelected: true }]}
-                placeholder="Set 7.5"
+                placeholder="Mùa 8.5"
                 className="dropdown"
               />
             </div>
@@ -87,7 +86,7 @@ function DatabaseLayout() {
                     <SearchOrigin
                       minWidth="300px"
                       reverse={true}
-                      placeholder="Search for a champion..."
+                      placeholder="Tìm kiếm tướng..."
                       className="search"
                       hanleSearch={hanleSearch}
                     />
@@ -99,7 +98,7 @@ function DatabaseLayout() {
                     <SearchOrigin
                       minWidth="300px"
                       reverse={true}
-                      placeholder="Search for a champion.."
+                      placeholder="Tìm kiếm theo tướng..."
                       className="search"
                       hanleSearch={hanleSearch}
                     />
@@ -111,7 +110,7 @@ function DatabaseLayout() {
                     <SearchOrigin
                       minWidth="300px"
                       reverse={true}
-                      placeholder="Search for an origin..."
+                      placeholder="Tìm kiếm theo tộc..."
                       className="search"
                       hanleSearch={hanleSearch}
                     />
@@ -123,7 +122,7 @@ function DatabaseLayout() {
                     <SearchOrigin
                       minWidth="300px"
                       reverse={true}
-                      placeholder="Search for a class..."
+                      placeholder="Tìm kiếm theo hệ..."
                       className="search"
                       hanleSearch={hanleSearch}
                     />

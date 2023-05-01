@@ -157,15 +157,15 @@ export default function Champions() {
         sideContent={
           <ChampionsSideContent>
             <div className="champions-side-title">
-              <span className="title-name">Filter</span>
+              <span className="title-name">Bộ lọc</span>
               <button onClick={() => resetFilter()}>Reset</button>
             </div>
-            <SelectSide count={8} name="Cost">
+            <SelectSide count={8} name="Theo giá tiền">
               {createElementsFromNumber(8)}
             </SelectSide>
             <SelectSide
               count={synergysData.filter((s) => s.type === "origin").length}
-              name="Origin"
+              name="Theo tộc"
             >
               {synergysData
                 .filter((s) => s.type === "origin")
@@ -193,7 +193,7 @@ export default function Champions() {
             </SelectSide>
             <SelectSide
               count={synergysData.filter((s) => s.type === "class").length}
-              name="Class"
+              name="Theo hệ"
             >
               {synergysData
                 .filter((s) => s.type === "class")
@@ -224,10 +224,9 @@ export default function Champions() {
         titleContent={
           <Title className="title">
             <div className="title-1">
-              <div className="name">TFT Champions List</div>
+              <div className="name">Danh sách tướng DTCL</div>
               <SelectDropDown
-                dropDownItems={[{ text: "Set 7.5", isSelected: true }]}
-                placeholder="Set 7.5"
+                placeholder="Mùa 8.5"
                 className="dropdown"
               />
             </div>
@@ -235,7 +234,7 @@ export default function Champions() {
               <SearchOrigin
                 minWidth="300px"
                 reverse={true}
-                placeholder="Search by name, origin, or class..."
+                placeholder="Tìm kiếm tên tướng, tộc, hệ..."
                 className="search"
                 hanleSearch={hanleSeach}
               />

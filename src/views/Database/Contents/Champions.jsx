@@ -88,23 +88,22 @@ function Champions() {
       <div className="wrapper">
         <div className="title">
           <p>
-            Find a list of all the Champions in Teamfight Tactics with their
-            corresponding Origins, Classes, and cost.
+            Tra cứu danh sách tướng DTCL theo tộc, hệ, giá tiền.
           </p>
         </div>
         <div className="table">
           <div className="table-header">
             <div onClick={(e) => hanleClick(e)} className="table-header-item">
-              Champion
+              Tướng
             </div>
             <div onClick={(e) => hanleClick(e)} className="table-header-item">
-              Origin
+              Tộc
             </div>
             <div onClick={(e) => hanleClick(e)} className="table-header-item">
-              CLass
+              Hệ
             </div>
             <div onClick={(e) => hanleClick(e)} className="table-header-item">
-              Cost
+              Giá tiền
             </div>
           </div>
           <div className="table-items">

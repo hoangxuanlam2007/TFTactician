@@ -118,7 +118,7 @@ const CharacterInfo = memo((props) => {
               </div>
               <div className="popup-items">
                 <span>
-                  Items:{" "}
+                  Trang bị:{" "}
                   {itemsRecommend.map((item, index) => {
                     return (
                       <span key={item.item_name}>

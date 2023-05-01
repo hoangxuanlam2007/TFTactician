@@ -24,15 +24,14 @@ function Classes() {
       <div className="wrapper">
         <div className="title">
           <p>
-            Find a list of all the Classes in Teamfight Tactics with their
-            corresponding Bonuses and Champions.
+            Tra cứu toàn bộ hệ trong DTCK.
           </p>
         </div>
         <div className="table">
           <div className="table-header">
-            <div className="table-header-item">Origin</div>
-            <div className="table-header-item">Bonus</div>
-            <div className="table-header-item">Unit</div>
+            <div className="table-header-item">Hệ</div>
+            <div className="table-header-item">Mốc kích hoạt</div>
+            <div className="table-header-item">Đơn vị</div>
           </div>
           <div className="table-items">
             {s_data

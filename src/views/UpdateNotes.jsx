@@ -12,7 +12,7 @@ function UpdateNotes() {
     <h6
         style={{'margin': '20px 0', 'color': '#88a0a7'}}
     >Xem thông tin tại trang chính thức của Đấu Trường Chân Lý:</h6>
-    <iframe title="Official Teamfight Tactics Website" src="https://teamfighttactics.leagueoflegends.com/vi-vn/news/game-updates/glitched-out-gameplay-overview/"></iframe>
+    <iframe title="Official Teamfight Tactics Website" src="https://teamfighttactics.leagueoflegends.com/vi-vn/news/game-updates/teamfight-tactics-patch-13-8-notes/"></iframe>
 
     </RootLayoutDefault>
   );

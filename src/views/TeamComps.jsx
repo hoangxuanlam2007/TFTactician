@@ -184,12 +184,12 @@ function TeamComps() {
         sideContent={
           <ItemBulderSideContent>
             <div className="champions-side-title">
-              <span className="title-name">Filter</span>
+              <span className="title-name">Bộ lọc</span>
               <button onClick={() => resetFilter()}>Reset</button>
             </div>
             <SelectSide
               expand={true}
-              name="Playstyle"
+              name="Theo lối chơi"
               count={uniqueType.length}
             >
               {uniqueType.map((type) => {
@@ -207,7 +207,7 @@ function TeamComps() {
             </SelectSide>
             <SelectSide
               count={synergysData.filter((s) => s.type === "origin").length}
-              name="Origin"
+              name="Theo tộc"
             >
               {synergysData
                 .filter((s) => s.type === "origin")
@@ -235,7 +235,7 @@ function TeamComps() {
             </SelectSide>
             <SelectSide
               count={synergysData.filter((s) => s.type === "class").length}
-              name="Class"
+              name="Theo hệ"
             >
               {synergysData
                 .filter((s) => s.type === "class")
@@ -266,10 +266,9 @@ function TeamComps() {
         titleContent={
           <Title className="title">
             <div className="title-1">
-              <div className="name">TFT Meta Team Comps Tier List</div>
+              <div className="name">Đội hình DTCL thuộc Meta hiện tại</div>
               <SelectDropDown
-                dropDownItems={[{ text: "Set 7.5", isSelected: true }]}
-                placeholder="Set 7.5"
+                placeholder="Mùa 8.5"
                 className="dropdown"
               />
             </div>
@@ -290,20 +289,20 @@ function TeamComps() {
               <div className="teamcomps-title-patch">
                 <Button
                   className="teamcomps-title-patch-btn"
-                  btnText="Patch 12.20b"
+                  btnText="Cập nhật 13.8"
                 />
               </div>
               <div className="teamcomps-title-tier">
-                <Button className="teamcomps-title-patch-btn" btnText="Tier Up">
+                <Button className="teamcomps-title-patch-btn" btnText="Thăng hạng">
                   <Status status="up" />
                 </Button>
                 <Button
                   className="teamcomps-title-patch-btn"
-                  btnText="Tier Down"
+                  btnText="Xuống hạng"
                 >
                   <Status status="down" />
                 </Button>
-                <Button className="teamcomps-title-patch-btn" btnText="New">
+                <Button className="teamcomps-title-patch-btn" btnText="Mới">
                   <Status status="new" />
                 </Button>
               </div>

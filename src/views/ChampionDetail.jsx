@@ -26,11 +26,11 @@ function ChampionDetail(props) {
               <div className="side-content-avatar-img">
                 <img src={championDetail.champion_img_link} alt="" />
               </div>
-              <span>TFT {championDetail.champion_name}</span>
+              <span>{championDetail.champion_name}</span>
             </div>
             <div className="side-content-build">
               <div className="side-content-build-title">
-                <span>Item Build</span>
+                <span>Trang bị chuẩn</span>
               </div>
               <div className="side-content-build-items">
                 {championDetail.champion_items.map((itemName) => {
@@ -48,46 +48,46 @@ function ChampionDetail(props) {
             </div>
             <div className="side-content-stats">
               <div className="side-content-stats-title">
-                <span>Stats</span>
+                <span>Thông số cơ bản</span>
               </div>
               <ul className="side-content-stats-wrapper">
                 <li>
-                  Cost:{" "}
+                  Giá tiền: {" "}
                   <FontAwesomeIcon className="coin" icon={solid("coins")} />{" "}
                   <span>{championDetail.champion_cost}</span>
                 </li>
                 <li>
-                  Health: <span>{championDetail.champion_health}</span>
+                  Máu: <span>{championDetail.champion_health}</span>
                 </li>
                 <li>
-                  Mana: <span>{championDetail.champion_mana}</span>
+                  Năng lượng: <span>{championDetail.champion_mana}</span>
                 </li>
                 {championDetail?.champion_starting_mana && (
                   <li>
-                    Starting Mana:{" "}
+                    Năng lượng khởi đầu:{" "}
                     <span>{championDetail?.champion_starting_mana}</span>
                   </li>
                 )}
                 <li>
-                  Armor: <span>{championDetail.champion_armor}</span>
+                  Giáp: <span>{championDetail.champion_armor}</span>
                 </li>
                 <li>
-                  MR: <span>{championDetail.champion_mr}</span>
+                  Kháng phép: <span>{championDetail.champion_mr}</span>
                 </li>
                 <li>
-                  DPS: <span>{championDetail.champion_dps}</span>
+                  Sát thương/giây: <span>{championDetail.champion_dps}</span>
                 </li>
                 <li>
-                  Damage: <span>{championDetail.champion_damage}</span>
+                  Sát thương tay: <span>{championDetail.champion_damage}</span>
                 </li>
                 <li>
-                  Atk Spd: <span>{championDetail.champion_akt_spd}</span>
+                  Tốc độ đánh: <span>{championDetail.champion_akt_spd}</span>
                 </li>
                 <li>
-                  Crit Rate: <span>{championDetail.champion_crit_rate}</span>
+                  Tỉ lệ chí mạng: <span>{championDetail.champion_crit_rate}</span>
                 </li>
                 <li>
-                  Range: <span>{championDetail.champion_range}</span>
+                  Tầm đánh: <span>{championDetail.champion_range}</span>
                 </li>
               </ul>
             </div>
@@ -97,7 +97,7 @@ function ChampionDetail(props) {
           <ChampionDetailMainContent>
             <div className="main-content-abilities">
               <div className="main-content-abilities-title">
-                <span>Abilities</span>
+                <span>Kĩ năng</span>
               </div>
               <div className="main-content-abilities-skill">
                 <div className="main-content-abilities-skill-img">
@@ -188,7 +188,7 @@ function ChampionDetail(props) {
             </div>
             <div className="main-content-trait">
               <div className="main-content-trait-title">
-                <span>Synergies</span>
+                <span>Đội hình</span>
               </div>
               {championDetail.champion_class
                 .concat(championDetail.champion_origin)

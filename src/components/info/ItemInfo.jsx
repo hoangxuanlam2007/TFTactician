@@ -75,7 +75,7 @@ const ItemInfo = memo((props) => {
                   {itemDetail &&
                     Object.keys(itemDetail?.item_stats).map((item) => {
                       return (
-                        <span key={item}>{itemDetail?.item_stats[item]}</span>
+                        <span key={item}>+{itemDetail?.item_stats[item]}</span>
                       );
                     })}
                 </div>
@@ -85,13 +85,13 @@ const ItemInfo = memo((props) => {
               {itemDetail.item_description}
               {itemDetail.is_unique_item === "true" &&
                 itemDetail?.item_name !== "Thief's Gloves" && (
-                  <p className="special-item">[Unique - only 1 per champion]</p>
+                  <p className="special-item">[Duy nhất - chỉ 1 với mỗi tướng]</p>
                 )}
               {itemDetail.is_aura_item === "true" && (
-                <p className="special-item">[Aura item]</p>
+                <p className="special-item">[Trang bị hào quang]</p>
               )}
               {itemDetail?.item_name === "Thief's Gloves" && (
-                <p className="special-item">[Consumes 3 item slots.]</p>
+                <p className="special-item">[Cần 3 slot trang bị]</p>
               )}
             </div>
             <div className="loading">
@@ -100,10 +100,11 @@ const ItemInfo = memo((props) => {
             {(itemDetail.is_combined === "true" || !itemDetail?.is_trait) && (
               <div className="popup-items">
                 <span>
-                  Recipes:
+                  Công thức:
                   {itemDetail.is_combined === "true" && (
                     <span>
                       <img src={getItemRecipeImg(itemDetail.recipe_1)} alt="" />
+                      <span style={{'margin': '0 0 0 5px', 'fontSize': '21px', 'fontWeight': '400'}}>+</span>
                       <img
                         src={getItemRecipeImg(itemDetail.recipe_2)}
                         alt=""

@@ -24,15 +24,14 @@ function Origins() {
       <div className="wrapper">
         <div className="title">
           <p>
-            Find a list of all the Origins in Teamfight Tactics with their
-            corresponding Bonuses and Champions.
+            Tra cứu toàn bộ Tộc trong DTCL.
           </p>
         </div>
         <div className="table">
           <div className="table-header">
-            <div className="table-header-item">Origin</div>
-            <div className="table-header-item">Bonus</div>
-            <div className="table-header-item">Unit</div>
+            <div className="table-header-item">Tộc</div>
+            <div className="table-header-item">Mốc kích hoạt</div>
+            <div className="table-header-item">Đơn vị</div>
           </div>
           <div className="table-items">
             {s_data

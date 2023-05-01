@@ -112,16 +112,16 @@ function ItemBuilder() {
       <MainLayout
         sideContent={
           <ItemBulderSideContent>
-            <h1>Choose an Item</h1>
+            <h1>Chọn trang bị</h1>
             <SearchOrigin
-              placeholder="Search for an item..."
+              placeholder="Tìm kiếm trang bị..."
               className="sidecontent-search"
               hanleSearch={hanleSearch}
               reverse={true}
             />
             <BaseItem>
               <div className="base-item-title">
-                <span>Base Items</span>
+                <span>Trang bị cơ bản</span>
               </div>
               <div className="list-items">
                 {baseItems
@@ -143,7 +143,7 @@ function ItemBuilder() {
             </BaseItem>
             <BaseItem>
               <div className="base-item-title">
-                <span>Combined Items</span>
+                <span>Trang bị kết hợp</span>
               </div>
               <div className="list-items">
                 {combinedItems
@@ -172,10 +172,9 @@ function ItemBuilder() {
         titleContent={
           <Title className="title">
             <div className="title-1">
-              <div className="name">TFT Items Cheat Sheet</div>
+              <div className="name">Bảng trang bị</div>
               <SelectDropDown
-                dropDownItems={[{ text: "Set 7.5", isSelected: true }]}
-                placeholder="Set 7.5"
+                placeholder="Mùa 8.5"
                 className="dropdown"
               />
             </div>
@@ -191,9 +190,9 @@ function ItemBuilder() {
                 </div>
                 <div className="main-content-table">
                   <div className="main-content-table-header">
-                    <div className="main-content-table-header-item">Recipe</div>
+                    <div className="main-content-table-header-item">Công thức</div>
                     <div className="main-content-table-header-item">
-                      Combines Info
+                      Trang bị hoàn chỉnh
                     </div>
                   </div>
                   <div className="main-content-table-items">
@@ -215,6 +214,7 @@ function ItemBuilder() {
                               height="35px"
                               item_name={capitalize(item.recipe_1)}
                             />
+                            <div style={{'marginRight': '10px', 'fontSize': '21px', 'fontWeight': '400'}}>+</div>
                             <ItemInfo
                               hanleClick={() => {
                                 setItemDetailName(item.recipe_2);
@@ -226,7 +226,7 @@ function ItemBuilder() {
                               height="35px"
                               item_name={capitalize(item.recipe_2)}
                             />
-                          </div>
+                            </div>
                           <div className="main-content-table-item-info">
                             <ItemInfo
                               hanleClick={() => {
@@ -243,19 +243,19 @@ function ItemBuilder() {
                               <p>{item.item_description}</p>
                               {item.is_unique_item === "true" ? (
                                 <p className="special-item">
-                                  [Unique - only 1 per champion]
+                                  [Duy nhất - chỉ 1 với mỗi tướng]
                                 </p>
                               ) : (
                                 ""
                               )}
                               {item.is_unique_aura === "true" ? (
-                                <p className="special-item">[Aura item]</p>
+                                <p className="special-item">[Trang bị hào quang]</p>
                               ) : (
                                 ""
                               )}
                               {item.item_name === "Thief's Gloves" ? (
                                 <p className="special-item">
-                                  [Consumes 3 item slots.]
+                                  [Cần 3 slot trang bị]
                                 </p>
                               ) : (
                                 ""
@@ -269,7 +269,7 @@ function ItemBuilder() {
                 </div>
               </Fragment>
             ) : (
-              "Item can't be craft"
+              "Trang bị không thể được tạo"
             )}
           </ItemBuildMainContent>
         }

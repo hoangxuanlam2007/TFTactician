@@ -178,16 +178,15 @@ function ChampionsStats() {
       <div className="wrapper">
         <div className="title">
           <p>
-            Find a list of all the Champion stats in Teamfight Tactics including
-            health, range, and dps.
+            Tra cứu tướng theo thông số cơ bản như chỉ số phòng thủ và tấn công.
           </p>
         </div>
         <div className="options">
           <div onClick={() => offenseSet()} className="btn">
-            <span>offense</span>
+            <span>tấn công</span>
           </div>
           <div onClick={() => defenseSet()} className="btn">
-            <span>defense</span>
+            <span>phòng thủ</span>
           </div>
           <div className="level">
             <FontAwesomeIcon
@@ -210,22 +209,22 @@ function ChampionsStats() {
         <div className="table">
           <div className="table-header">
             <div onClick={(e) => hanleClick(e)} className="table-header-item">
-              Champion
+              Tướng
             </div>
             <div
               onClick={(e) => hanleClick(e)}
               className="table-header-item decrease"
             >
-              {type === "offense" ? "DPS" : "Health"}
+              {type === "offense" ? "Sát thương/giây" : "Máu"}
             </div>
             <div onClick={(e) => hanleClick(e)} className="table-header-item">
-              {type === "offense" ? "Atk Spd" : "Mana"}
+              {type === "offense" ? "Tốc độ đánh" : "Năng lượng"}
             </div>
             <div onClick={(e) => hanleClick(e)} className="table-header-item">
-              {type === "offense" ? "Damage" : "Armor"}
+              {type === "offense" ? "Sát thương tay" : "Giáp"}
             </div>
             <div onClick={(e) => hanleClick(e)} className="table-header-item">
-              {type === "offense" ? "Range" : "MR"}
+              {type === "offense" ? "Tầm đánh" : "Kháng phép"}
             </div>
           </div>
           <div className="table-items">
@@ -309,7 +308,7 @@ const ChampionsStatsDefault = styled.div`
         cursor: pointer;
         padding: 11px 67px;
         background-color: #123040;
-        width: min-content;
+        width: fit-content;
         &:hover {
           background-color: #1d4e68;
         }

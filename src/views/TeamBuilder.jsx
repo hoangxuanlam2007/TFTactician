@@ -368,12 +368,11 @@ export default function TeamBuilder() {
       <div className="team-builder-title">
         <div className="team-builder-title-info">
           <div className="team-builder-title-info-name">
-            <span>TFT Team Builder</span>
+            <span>Xây dựng đội hình DTCL</span>
           </div>
           <div className="team-builder-title-info-version">
             <SelectDropdown
-              dropDownItems={[{ text: "Set 7.5", isSelected: true }]}
-              placeholder={"Set 7.5"}
+              placeholder={"Mùa 8.5"}
             />
           </div>
         </div>
@@ -382,7 +381,7 @@ export default function TeamBuilder() {
             onClick={() => setShowPartialTraits((pre) => !pre)}
             className="team-builder-title-filter-partial-traits"
           >
-            <span>Show Partial Traits</span>
+            <span>Các mốc không được kích hoạt</span>
             <Switch active={showPartialTraits} />
           </div>
           <div
@@ -390,12 +389,12 @@ export default function TeamBuilder() {
             className="team-builder-title-filter-clear-team"
           >
             <button>
-              <span>Clear Team</span>
+              <span>Clear đội hình</span>
             </button>
           </div>
           <div className="team-builder-title-filter-share">
             <button onClick={() => hanleShare()}>
-              {shared ? <span>LINK COPIED!</span> : <span>SHARE</span>}
+              {shared ? <span>Đã sao chép liên kết!</span> : <span>Chia sẻ</span>}
             </button>
           </div>
         </div>
@@ -426,7 +425,7 @@ export default function TeamBuilder() {
                     size="lg"
                     icon={solid("circle-exclamation")}
                   />
-                  <span>No active synergies</span>
+                  <span>Không có tộc/hệ nào được kích hoạt</span>
                 </div>
               )}
             </Suspense>
@@ -443,7 +442,7 @@ export default function TeamBuilder() {
                       size="lg"
                       icon={solid("circle-exclamation")}
                     />
-                    <span>No equipped items</span>
+                    <span>Không có trang bị</span>
                   </div>
                 )}
                 {allRecipe.length > 0 && (
@@ -553,7 +552,7 @@ export default function TeamBuilder() {
                   }
                   hanle_search={searchCharacter}
                   hanle_on_drop={hanleOnDropTableChampions}
-                  placeholder="Search by name, trait, or cost..."
+                  placeholder="Tìm kiếm tướng, tộc, hệ..."
                 >
                   {unfilterCharacter.map((c) => {
                     return (
