@@ -208,6 +208,7 @@ img {
   padding: 6px 12px !important;
   border: none !important;
   margin: 0 5px;
+  font-size: 14px !important;
 }
 
 .btn-github:hover, .btn-fb:hover, .btn-ig:hover, .btn-yt:hover {
