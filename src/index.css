@@ -400,15 +400,16 @@ p {
 
 .container .footer-about {
   color: hsla(0,0%,100%,.9);
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 0;
   text-align: center;
   max-width: none;
+  line-height: 25px;
 }
 
 .container .footer-copyright {
   color: #88a0a7;
-  font-size: 14px;
+  font-size: 15px;
   margin-top: 10px;
   margin-bottom: 0;
   text-align: center;

@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 export default function Footer() {
+
   return (
     <FooterWrapper>
       <div className="container">
@@ -24,8 +25,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="divider footer"></div>
-        <p className="footer-about">TFTactician không được Riot Games chứng thực và không phản ánh quan điểm hay ý kiến ​​của Riot Games hay bất kỳ ai chính thức tham gia sáng tạo hoặc quản lý tài sản của Riot Games. Riot Games và tất cả các tài sản liên quan đều là nhãn hiệu đã đăng ký của Riot Games, Inc.</p>
-        <p className="footer-copyright">© TFTactician 2023</p>
+        <p className="footer-about">TFTactician is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
+        <p className="footer-copyright">© TFTactician {(new Date().getFullYear())}</p>
       </div>
     </FooterWrapper>
   );
