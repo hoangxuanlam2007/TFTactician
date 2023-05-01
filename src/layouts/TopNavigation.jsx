@@ -83,6 +83,7 @@ const TopNavigationDefault = styled.div`
           transition: all 0.3s;
           color: #88a0a7;
           text-decoration: none;
+          font-weight: 600;
           &::after {
             transition: all 0.3s;
             content: "";
